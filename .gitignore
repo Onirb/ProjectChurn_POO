@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.idea/
+venv/
+data/
+model/
+.DS_Store
+mlruns/
