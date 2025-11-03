@@ -1,0 +1,192 @@
+2025-11-02 15:50:09,300 [INFO] ProjectChurn: 📥 Carregando dados...
+2025-11-02 15:50:09,350 [INFO] ProjectChurn: 🧹 Pré-processando dados...
+2025-11-02 15:50:09,404 [INFO] ProjectChurn: 🤖 Treinando modelo RandomForest...
+2025-11-02 16:05:26,003 [INFO] ProjectChurn: 📥 Carregando dados...
+2025-11-02 16:05:26,058 [INFO] ProjectChurn: 🧹 Pré-processando dados...
+2025-11-02 16:05:26,142 [INFO] ProjectChurn: 🤖 Treinando modelo RandomForest...
+2025-11-02 16:05:28,470 [INFO] ProjectChurn: 📊 Avaliando modelo...
+2025-11-02 16:05:28,547 [INFO] ProjectChurn: 📊 Avaliação concluída: {'accuracy': 0.952, 'precision': 0.918918918918919, 'recall': 0.723404255319149, 'f1': 0.8095238095238095, 'roc_auc': 0.911735565848463, 'confusion_matrix': [[850, 9], [39, 102]]}
+2025-11-02 16:05:28,548 [INFO] ProjectChurn: 💾 Salvando modelo e métricas...
+2025-11-02 16:05:28,606 [INFO] ProjectChurn: 📈 Registrando métricas no MLflow...
+2025-11-02 16:05:28,715 [INFO] ProjectChurn: ✅ Execução concluída com sucesso.
+2025-11-03 15:01:45,710 [INFO] ProjectChurn: 🌐 GET / de 127.0.0.1 | Status: 200 | Tempo: 0.003s
+2025-11-03 15:01:45,801 [INFO] ProjectChurn: 🌐 GET /favicon.ico de 127.0.0.1 | Status: 404 | Tempo: 0.0s
+2025-11-03 15:02:15,922 [INFO] ProjectChurn: 🌐 GET /docs de 127.0.0.1 | Status: 200 | Tempo: 0.0s
+2025-11-03 15:02:16,078 [INFO] ProjectChurn: 🌐 GET /openapi.json de 127.0.0.1 | Status: 200 | Tempo: 0.023s
+2025-11-03 15:02:30,022 [INFO] ProjectChurn: 🤖 Predição feita para 127.0.0.1: {'churn_probability': 0.39, 'churn_prediction': 0, 'interpretation': 'Não Churn'}
+2025-11-03 15:02:30,023 [INFO] ProjectChurn: 🌐 POST /predict de 127.0.0.1 | Status: 200 | Tempo: 0.043s
+2025-11-03 15:02:33,512 [INFO] ProjectChurn: 🤖 Predição feita para 127.0.0.1: {'churn_probability': 0.39, 'churn_prediction': 0, 'interpretation': 'Não Churn'}
+2025-11-03 15:02:33,514 [INFO] ProjectChurn: 🌐 POST /predict de 127.0.0.1 | Status: 200 | Tempo: 0.024s
+2025-11-03 15:25:05,899 [INFO] ProjectChurn: 📈 Métricas consultadas: 0 requisições, tempo médio 0s
+2025-11-03 15:25:05,901 [INFO] ProjectChurn: 🌐 GET /metrics de 127.0.0.1 | Status: 200 | Tempo: 0.004s
+2025-11-03 15:26:39,807 [INFO] ProjectChurn: 🧨 Testando exceção forçada...
+2025-11-03 15:26:40,434 [ERROR] ProjectChurn: 🔥 Exceção não tratada: Erro de teste intencional para validar o middleware.
+  + Exception Group Traceback (most recent call last):
+  |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\_utils.py", line 79, in collapse_excgroups
+  |     yield
+  |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 192, in __call__
+  |     async with anyio.create_task_group() as task_group:
+  |                ~~~~~~~~~~~~~~~~~~~~~~~^^
+  |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 781, in __aexit__
+  |     raise BaseExceptionGroup(
+  |         "unhandled errors in a TaskGroup", self._exceptions
+  |     ) from None
+  | ExceptionGroup: unhandled errors in a TaskGroup (1 sub-exception)
+  +-+---------------- 1 ----------------
+    | Traceback (most recent call last):
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\ProjectChurn\src\api\app.py", line 52, in catch_exceptions_middleware
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    |     with recv_stream, send_stream, collapse_excgroups():
+    |                                    ~~~~~~~~~~~~~~~~~~^^
+    |   File "C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    |     self.gen.throw(value)
+    |     ~~~~~~~~~~~~~~^^^^^^^
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    |     raise exc
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    |     response = await self.dispatch_func(request, call_next)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\ProjectChurn\src\api\app.py", line 31, in log_requests
+    |     response = await call_next(request)
+    |                ^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    |     raise app_exc from app_exc.__cause__ or app_exc.__context__
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    |     await self.app(scope, receive_or_disconnect, send_no_error)
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    |     await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    |     await self.middleware_stack(scope, receive, send)
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    |     await route.handle(scope, receive, send)
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    |     await self.app(scope, receive, send)
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\fastapi\routing.py", line 124, in app
+    |     await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    |     raise exc
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    |     await app(scope, receive, sender)
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\fastapi\routing.py", line 110, in app
+    |     response = await f(request)
+    |                ^^^^^^^^^^^^^^^^
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\fastapi\routing.py", line 390, in app
+    |     raw_response = await run_endpoint_function(
+    |                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     ...<3 lines>...
+    |     )
+    |     ^
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\fastapi\routing.py", line 291, in run_endpoint_function
+    |     return await run_in_threadpool(dependant.call, **values)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\concurrency.py", line 38, in run_in_threadpool
+    |     return await anyio.to_thread.run_sync(func)
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    |     return await get_async_backend().run_sync_in_worker_thread(
+    |            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |         func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+    |         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    |     )
+    |     ^
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    |     return await future
+    |            ^^^^^^^^^^^^
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    |     result = context.run(func, *args)
+    |   File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\ProjectChurn\src\api\app.py", line 124, in force_error
+    |     raise ValueError("Erro de teste intencional para validar o middleware.")
+    | ValueError: Erro de teste intencional para validar o middleware.
+    +------------------------------------
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\ProjectChurn\src\api\app.py", line 52, in catch_exceptions_middleware
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 191, in __call__
+    with recv_stream, send_stream, collapse_excgroups():
+                                   ~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\bruno\AppData\Local\Programs\Python\Python313\Lib\contextlib.py", line 162, in __exit__
+    self.gen.throw(value)
+    ~~~~~~~~~~~~~~^^^^^^^
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\_utils.py", line 85, in collapse_excgroups
+    raise exc
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 193, in __call__
+    response = await self.dispatch_func(request, call_next)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\ProjectChurn\src\api\app.py", line 31, in log_requests
+    response = await call_next(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 168, in call_next
+    raise app_exc from app_exc.__cause__ or app_exc.__context__
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\base.py", line 144, in coro
+    await self.app(scope, receive_or_disconnect, send_no_error)
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\middleware\exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\fastapi\middleware\asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\fastapi\routing.py", line 124, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\fastapi\routing.py", line 110, in app
+    response = await f(request)
+               ^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\fastapi\routing.py", line 390, in app
+    raw_response = await run_endpoint_function(
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    ...<3 lines>...
+    )
+    ^
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\fastapi\routing.py", line 291, in run_endpoint_function
+    return await run_in_threadpool(dependant.call, **values)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\starlette\concurrency.py", line 38, in run_in_threadpool
+    return await anyio.to_thread.run_sync(func)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\anyio\to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        func, args, abandon_on_cancel=abandon_on_cancel, limiter=limiter
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 2485, in run_sync_in_worker_thread
+    return await future
+           ^^^^^^^^^^^^
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\.venv\Lib\site-packages\anyio\_backends\_asyncio.py", line 976, in run
+    result = context.run(func, *args)
+  File "C:\Users\bruno\PycharmProjects\PythonProject\100-Code\PythonProject\Churn\ProjectChurn\src\api\app.py", line 124, in force_error
+    raise ValueError("Erro de teste intencional para validar o middleware.")
+ValueError: Erro de teste intencional para validar o middleware.
+
