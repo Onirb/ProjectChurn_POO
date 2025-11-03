@@ -61,13 +61,13 @@ The predictive model enables the business to proactively engage with customers (
 ---
 
 ## 📈 Model Performance
-| Metric       | Value  | Interpretation |
-|---------------|--------|----------------|
-| Accuracy      | **0.952** | The model correctly predicts ~95.2% of all cases |
-| Precision     | **0.919** | Among predicted churns, ~91.9% were actual churns |
-| Recall        | **0.723** | The model identifies ~72.3% of customers who actually churned |
-| F1-score      | **0.810** | Balanced trade-off between precision and recall |
-| ROC-AUC       | **0.912** | Excellent discrimination between churn vs non-churn |
+| Metric       | Value     | Interpretation                                                |
+|---------------|-----------|---------------------------------------------------------------|
+| Accuracy      | **0.955** | The model correctly predicts ~95.5% of all cases              |
+| Precision     | **0.929** | Among predicted churns, ~92.9% were actual churns             |
+| Recall        | **0.738** | The model identifies ~73.8% of customers who actually churned |
+| F1-score      | **0.822** | Balanced trade-off between precision and recall               |
+| ROC-AUC       | **0.901** | Excellent discrimination between churn vs non-churn           |
 
 ---
 
