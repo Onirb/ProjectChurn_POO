@@ -99,7 +99,7 @@ ProjectChurn_POO/
 ---
 
 ## 🔧 Tech Stack
-- **Python 3.10**  
+- **Python **  
 - **Pandas, NumPy, Scikit-learn** — data handling and model training  
 - **MLflow** — experiment tracking  
 - **FastAPI** — REST API for model inference  
