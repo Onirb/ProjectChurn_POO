@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c48c02c2-5485-4791-b2b8-ce09b038101c" name="Changes" comment="Initial project structure for ProjectChurn (POO + MLflow + API)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +90,7 @@
       <workItem from="1762018504085" duration="4390000" />
       <workItem from="1762101900504" duration="3984000" />
       <workItem from="1762108346649" duration="2527000" />
-      <workItem from="1762192633876" duration="4803000" />
+      <workItem from="1762192633876" duration="7219000" />
     </task>
     <task id="LOCAL-00001" summary="Initial project structure for ProjectChurn (POO + MLflow + API)">
       <option name="closed" value="true" />
