@@ -1,40 +1,16 @@
-# ========================================
-# 🧠 Core Machine Learning Dependencies
-# ========================================
+# Core machine learning
 numpy==2.3.4
 pandas==2.3.3
 scikit-learn==1.7.2
+xgboost==3.4.1
 joblib==1.5.2
 
-# ========================================
-# ⚙️ API and Web Framework
-# ========================================
+# API
 fastapi==0.120.4
 uvicorn==0.38.0
 
-# ========================================
-# 📊 Experiment Tracking & Visualization
-# ========================================
+# Experiment tracking
 mlflow==3.5.1
-matplotlib>=3.8.0
 
-# ========================================
-# 🧩 Utility and System Tools
-# ========================================
-python-dateutil>=2.9.0
-pytz>=2024.1
-tzdata>=2024.2
-
-# ========================================
-# 🧰 Development & Deployment
-# ========================================
-docker>=7.0.0
-Flask>=3.0.0
-Flask-Cors>=4.0.0
-
-# ========================================
-# ✅ Recommended Optional Tools
-# ========================================
-# streamlit==1.39.0      # for dashboard visualization
-# pytest==8.3.3           # for unit testing
-# black==24.10.0          # for code formatting
+# Local portfolio demo
+streamlit==1.64.0

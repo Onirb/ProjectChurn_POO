@@ -1,8 +1,4 @@
-
-
-import pandas as pd
-from sklearn.model_selection import train_test_split
-from sklearn.preprocessing import StandardScaler
+"""Pré-processador histórico preservado para comparação, não usado pela API atual."""
 
 import pandas as pd
 import numpy as np
@@ -31,14 +27,16 @@ class Preprocessor:
         """Encodes categorical columns (Yes/No -> 1/0 and get_dummies)."""
         df = df.copy()
 
-        # Normalize capitalization and encode binary values
+        # Normalize target values. The validated local dataset uses 0/1, while
+        # the historical CSV uses Yes/No. Both must produce an integer target.
         if self.target_col in df.columns:
-            df[self.target_col] = (
-                df[self.target_col]
-                .astype(str)
-                .str.lower()
-                .replace({'yes': 1, 'no': 0})
+            target = df[self.target_col].astype(str).str.strip().str.lower()
+            mapped_target = target.replace(
+                {"yes": 1, "no": 0, "true": 1, "false": 0, "1": 1, "0": 0}
             )
+            if not mapped_target.isin([0, 1]).all():
+                raise ValueError("A coluna alvo deve conter apenas valores binários.")
+            df[self.target_col] = mapped_target.astype(int)
 
         df = df.replace({'yes': 1, 'no': 0, 'Yes': 1, 'No': 0})
 

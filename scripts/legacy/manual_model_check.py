@@ -1,3 +1,5 @@
+"""Verificação manual histórica; requer um artefato de modelo local."""
+
 import pandas as pd
 import joblib
 

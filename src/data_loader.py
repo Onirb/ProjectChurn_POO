@@ -1,5 +1,7 @@
 import pandas as pd
 
+from .data_contract import validate_churn_dataframe
+
 class DataLoader:
     """
     Classe responsável por carregar e inspecionar os dados.
@@ -10,12 +12,12 @@ class DataLoader:
         self.data = None
 
     def load(self):
-        """Carrega o dataset em um DataFrame."""
+        """Carrega, normaliza e valida o dataset de churn."""
         df = pd.read_csv(self.file_path)
         if self.drop_cols:
             df = df.drop(columns=self.drop_cols, errors="ignore")
-        self.data = df
-        return df
+        self.data = validate_churn_dataframe(df)
+        return self.data
 
     def info(self):
         """Retorna informações básicas do dataset."""

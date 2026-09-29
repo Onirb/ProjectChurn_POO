@@ -1,0 +1,9 @@
+# Dependências de execução da API Docker.
+# Experimentos, rastreamento MLflow e a interface Streamlit ficam no
+# ambiente local de desenvolvimento, não na imagem de serviço.
+numpy==2.3.4
+pandas==2.3.3
+scikit-learn==1.7.2
+joblib==1.5.2
+fastapi==0.120.4
+uvicorn==0.38.0

@@ -1,0 +1,11 @@
+customer_id,accountlength,internationalplan,voicemailplan,numbervmailmessages,totaldayminutes,totaldaycalls,totaldaycharge,totaleveminutes,totalevecalls,totalevecharge,totalnightminutes,totalnightcalls,totalnightcharge,totalintlminutes,totalintlcalls,totalintlcharge,numbercustomerservicecalls
+DEMO-001,128,no,yes,25,265.4,107,45.12,197.3,88,16.77,244.7,91,11.01,10.2,3,2.75,1
+DEMO-002,92,yes,no,0,310.8,115,52.84,223.1,101,18.96,198.5,102,8.93,14.5,5,3.92,4
+DEMO-003,45,no,no,0,142.6,84,24.24,178.8,96,15.20,210.3,88,9.46,8.1,2,2.19,0
+DEMO-004,180,yes,yes,31,336.2,123,57.15,251.9,114,21.41,281.7,105,12.68,16.9,6,4.56,5
+DEMO-005,65,no,yes,18,201.1,99,34.19,192.7,90,16.38,230.4,94,10.37,9.8,3,2.65,1
+DEMO-006,213,no,no,0,118.4,70,20.13,143.2,74,12.17,189.6,86,8.53,7.4,2,2.00,0
+DEMO-007,101,yes,no,0,289.6,111,49.23,233.4,109,19.84,260.1,107,11.70,13.7,4,3.70,3
+DEMO-008,150,no,yes,42,238.5,103,40.55,215.2,98,18.29,245.8,99,11.06,11.6,3,3.13,2
+DEMO-009,37,no,no,0,176.3,89,29.97,164.9,82,14.02,203.7,90,9.17,6.3,2,1.70,0
+DEMO-010,240,yes,no,0,355.8,130,60.49,278.3,121,23.66,299.4,118,13.47,18.2,7,4.91,6

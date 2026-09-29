@@ -1,3 +1,5 @@
+"""Verificação manual histórica; requer uma API local já iniciada."""
+
 import requests
 import json
 

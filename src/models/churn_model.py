@@ -1,16 +1,14 @@
 import joblib
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import roc_auc_score
+
+from ..training_pipeline import build_churn_pipeline
 
 class ChurnModel:
     """
     Classe que encapsula o modelo de Churn (RandomForest).
     """
     def __init__(self, n_estimators=100, random_state=42):
-        self.model = RandomForestClassifier(
-            n_estimators=n_estimators,
-            random_state=random_state
-        )
+        self.model = build_churn_pipeline(n_estimators=n_estimators, random_state=random_state)
         self.trained = False
         self.metrics = {}
 

@@ -10,9 +10,13 @@ __pycache__/
 *.env
 .vscode/
 .idea/
+.venv/
+.pytest_cache/
 .git/
 .gitignore
 data/
 notebooks/
 tests/
 mlruns/
+runs/
+logs/

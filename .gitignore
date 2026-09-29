@@ -2,7 +2,14 @@ __pycache__/
 *.pyc
 .idea/
 venv/
-data/
+# Dados brutos e artefatos gerados permanecem locais. O guia de aquisição é
+# versionado para que qualquer pessoa consiga reconstruir o ambiente.
+data/*
+!data/README.md
+!data/demo/
+!data/demo/customer_batch_demo.csv
 model/
+logs/
 .DS_Store
 mlruns/
+runs/

@@ -1,8 +1,10 @@
 import os
 import mlflow
 import pandas as pd
+from sklearn.model_selection import train_test_split
+
 from .data_loader import DataLoader
-from .preprocessing import Preprocessor
+from .data_contract import FEATURE_COLUMNS, TARGET_COLUMN
 from .models.churn_model import ChurnModel
 from .evaluation import Evaluator
 from .logger_config import logger  # 🔹 importa o logger
@@ -14,12 +16,15 @@ def main():
     try:
         with mlflow.start_run():
             logger.info("📥 Carregando dados...")
-            dl = DataLoader("data/churn.csv")
+            dl = DataLoader("data/processed/churn.csv")
             df = dl.load()
 
             logger.info("🧹 Pré-processando dados...")
-            pre = Preprocessor(target_col="churn")
-            X_train, X_test, y_train, y_test = pre.preprocess(df)
+            X = df.loc[:, list(FEATURE_COLUMNS)]
+            y = df[TARGET_COLUMN]
+            X_train, X_test, y_train, y_test = train_test_split(
+                X, y, test_size=0.2, random_state=42, stratify=y
+            )
 
             logger.info("🤖 Treinando modelo RandomForest...")
             model = ChurnModel(n_estimators=100)
@@ -34,7 +39,7 @@ def main():
 
             logger.info("💾 Salvando modelo e métricas...")
             os.makedirs("model", exist_ok=True)
-            model.save("model/churn_model.joblib")
+            model.save("model/churn_pipeline.joblib")
             Evaluator.save_metrics(metrics)
 
             logger.info("📈 Registrando métricas no MLflow...")
@@ -48,6 +53,7 @@ def main():
 
     except Exception as e:
         logger.error(f"❌ Erro durante execução: {str(e)}", exc_info=True)
+        raise
 
 if __name__ == "__main__":
     main()
