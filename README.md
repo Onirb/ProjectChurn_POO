@@ -1,4 +1,27 @@
 # ProjectChurn_POO 🚀  
+
+## Portfolio overview
+
+A reproducible end-to-end churn prediction case study that connects data contracts, training and evaluation, MLflow tracking, a FastAPI inference API, Docker, automated tests and a local Streamlit decision-support demo.
+
+| Focus | Evidence |
+| --- | --- |
+| ML/MLOps engineering | Modular pipeline, MLflow, FastAPI, Docker and CI |
+| Reproducibility | Documented data contract and verified local benchmark |
+| Decision support | Campaign-policy endpoints and a synthetic local demo |
+| Scope | Local portfolio project; benchmark values are not production claims |
+
+```mermaid
+flowchart LR
+  A[Permitted source CSV] --> B[Data preparation and contract checks]
+  B --> C[Train and evaluate]
+  C --> D[MLflow and local model artifact]
+  D --> E[FastAPI inference API]
+  D --> F[Local Streamlit decision-support demo]
+```
+
+**Start here:** review the verified benchmark, then run the tests or follow the local demo flow below.
+
 **Customer Churn Prediction API** built with **Python**, **FastAPI**, and **Scikit-Learn**, featuring a reproducible local data contract, an end-to-end inference pipeline, structured logging, MLflow tracking, and Docker configuration.
 
 ![Python](https://img.shields.io/badge/Python-3.12.10-blue?logo=python&logoColor=white)
